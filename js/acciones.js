@@ -3,6 +3,7 @@ $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
 function consulta()
 {
+	alert("Dentro");
 	datos="";
     $.ajax({
 		type: "POST",
