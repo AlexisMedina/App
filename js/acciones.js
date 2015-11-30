@@ -6,10 +6,14 @@ function consulta()
 	datos="";
     $.ajax({
 		type: "POST",
-		url: "192.168.1.30/procesar.php",
-		data: datos
-	}).done(function(mensaje){
-		alert(mensaje);
+		url: "http://192.168.1.176/libreria/movil.php",
+		data: datos, 
+		error: function() {
+			alert("Error, no se puede conectar al servidor");
+		},
+		success: function(respuesta) {
+			alert(respuesta);
+		}
 	});
 }
 	
