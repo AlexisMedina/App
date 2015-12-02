@@ -13,7 +13,8 @@ function consulta()
 			alert("Error, no se puede conectar al servidor");
 		},
 		success: function(respuesta) {
-			alert(respuesta);
+         var datosLibros = JSON.parse(respuesta);
+		 alert("libro: " + datosLibros.Libros[0].tituloLibro);
 		}
 	});
 }
