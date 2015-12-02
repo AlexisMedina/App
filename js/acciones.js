@@ -14,7 +14,14 @@ function consulta()
 		},
 		success: function(respuesta) {
          var datosLibros = JSON.parse(respuesta);
-		 alert("libro: " + datosLibros.Libros[0].tituloLibro);
+		 $('#contenido').empty();
+		 $(':mobile-pagecontainer').pagecontainer('change', '#listado', {
+			transition: 'pop' 
+		 });
+		 for (var x= 0; x<datosLibros.Libros.length; x++) {
+			 $('#contenido').append("<div><div><div style='display:inline-block'><img src='http://192.168.1.176/proyecto/recursos/imagenes/libro/" + datosLibros.Libros[x].claveLibro + ".jpg' width='200' height='200' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: " + datosLibros.Libros[x].precioventa + "</h2></div>   <div>     <h2>Sinopsis:   </h2><br><center><p>" + datosLibros.Libros[x].sinopsis + "</p></center><br><center><h2>Genero: " + datosLibros.Libros[x].generoLibro + "</h2> </center></div></div>");
+		 }
+		 
 		}
 	});
 }
