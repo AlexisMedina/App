@@ -7,7 +7,7 @@ function consulta()
 	datos="";
     $.ajax({
 		type: "POST",
-		url: "http://192.168.1.176/libreria/movil.php",
+		url: "http://192.168.1.176/libreria/buscarTodos.php",
 		data: datos, 
 		error: function() {
 			alert("Error, no se puede conectar al servidor");

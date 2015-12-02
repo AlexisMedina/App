@@ -5,10 +5,10 @@
      id    = "com.phonegap.Esqueleto"  
      version  = "1.0.0">  
 	 
-   <name> Aplicacion </name>  
+   <name> Libreria </name>  
    
    <description>  
-     Primer Ejemplo de eventos
+     Aplicacion de consultas
    </description>  
    
    <author href="https://build.phonegap.com" email="micorreo@gmail.com">  
