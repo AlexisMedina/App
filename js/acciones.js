@@ -32,6 +32,7 @@ function consultatitulo()
 { 
 	alert("Dentro titulo");
 	datos="titulo=" + $('#txttitulo').val();
+	alert(datos);
     $.ajax({  
 		type: "POST",
 		url: "http://192.168.1.67/libreria/buscarTitulo.php",
@@ -59,7 +60,8 @@ function consultatitulo()
 function consultaautor()
 { 
 	alert("Dentro autor");
-	datos="autor=" + $('#txtautor').val();
+	var datos="autor=" + $('#txtautor').val();
+	alert(datos);
     $.ajax({  
 		type: "POST",
 		url: "http://192.168.1.67/libreria/buscarAutor.php",
