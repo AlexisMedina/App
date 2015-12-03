@@ -30,7 +30,7 @@ function consulta()
 
 function consultatitulo()
 { 
-	alert("Dentro");
+	alert("Dentro titulo");
 	datos="titulo=" + $('#txttitulo').val();
     $.ajax({  
 		type: "POST",
@@ -58,7 +58,7 @@ function consultatitulo()
 
 function consultaautor()
 { 
-	alert("Dentro");
+	alert("Dentro autor");
 	datos="autor=" + $('#txtautor').val();
     $.ajax({  
 		type: "POST",
@@ -85,7 +85,7 @@ function consultaautor()
 
 function consultaeditorial()
 { 
-	alert("Dentro");
+	alert("Dentro editorial");
 	datos="editorial=" + $('#txteditorial').val();
     $.ajax({  
 		type: "POST",
