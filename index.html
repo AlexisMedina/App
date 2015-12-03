@@ -30,7 +30,34 @@
   </div>
 
   <div data-role="main" class="ui-content">
-    <a href="#" class="ui-btn ui-btn-corner-all ui-icon-alert ui-btn-icon-right" id="btnconsulta">Consulta</a>
+    <a href="#" class="ui-btn ui-btn-corner-all ui-icon-alert ui-btn-icon-right" id="btnconsulta">Todos los libros</a>
+    
+    <div data-role="collapsible" data-content-theme="false">
+<h1> Realizar una busqueda </h1>
+<div>
+<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
+<li class="ui-first-child ui-last-child">
+<a href="#titulo" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Titulo</h2>
+</a>
+</li>
+
+<li class="ui-first-child ui-last-child">
+<a href="#autor" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Autor</h2>
+</a>
+</li>
+
+<li class="ui-first-child ui-last-child">
+<a href="#editorial" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Editorial</h2>
+</a>
+</li>
+
+</ul>
+</div>
+
+</div>
   </div>
 
   <div data-role="footer">
@@ -39,7 +66,7 @@
  </div>  
  <!-- Principal -->
 
-<!-- lisdtado -->
+<!-- listado -->
  <div data-role="page" id="listado" >   
   <div data-role="header">
     <h1>Listado de todos los libros</h1>
@@ -47,36 +74,7 @@
 
 
   <div data-role="main" class="ui-content">
-  
-  
-  <div data-role="collapsible" data-content-theme="false">
-<h1> Realizar una busqueda </h1>
-<div>
-<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
-<li class="ui-first-child ui-last-child">
-<a href="#titulo" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-<h2>Titulo</h2>
-</a>
-</li>
-
-<li class="ui-first-child ui-last-child">
-<a href="#autor" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-<h2>Autor</h2>
-</a>
-</li>
-
-<li class="ui-first-child ui-last-child">
-<a href="#editorial" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-<h2>Editorial</h2>
-</a>
-</li>
-
-</ul>
-</div>
-
-</div>
-  
-    <div id="contenido">
+  <div id="contenido">
      
     </div>
   </div>
@@ -85,51 +83,53 @@
  <!-- listado -->
 
 
-
-
- <div data-role="page" id="libros" >
- 
-<div data-role="header">
-    <h1>Busqueda</h1>
+<!-- titulo -->
+ <div data-role="page" id="titulo" >   
+  <div data-role="header">
+    <h1>Búsqueda por título</h1>
   </div>
+
+
+  <div data-role="main" class="ui-content">
+  <input type="text" name="txttitulo">
+  </div>
+
+ </div>  
+ <!-- titulo -->
+ 
+ 
+ 
+ <!-- autor -->
+ <div data-role="page" id="autor" >   
+  <div data-role="header">
+    <h1>Búsqueda por autor</h1>
+  </div>
+
+
+  <div data-role="main" class="ui-content">
+  <input type="text" name="txtautor">
+  </div>
+
+ </div>  
+ <!-- autor -->
+ 
+ 
+ <!-- editorial -->
+ <div data-role="page" id="editorial" >   
+  <div data-role="header">
+    <h1>Búsqueda por editorial</h1>
+  </div>
+
+
+  <div data-role="main" class="ui-content">
+ <input type="text" name="txteditorial">
+  </div>
+
+ </div>  
+ <!-- editorial -->
+
+
   
-  <div data-role="content" align="center">
-<div>
-<div data-role="collapsible" data-content-theme="false">
-<h1> Realizar una busqueda </h1>
-<div>
-<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
-<li class="ui-first-child ui-last-child">
-<a href="#titulo" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-<h2>Titulo</h2>
-</a>
-</li>
-
-<li class="ui-first-child ui-last-child">
-<a href="#autor" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-<h2>Autor</h2>
-</a>
-</li>
-
-<li class="ui-first-child ui-last-child">
-<a href="#editorial" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-<h2>Editorial</h2>
-</a>
-</li>
-
-</ul>
-</div>
-
-</div>
-
-<div>
-
-</div>
-
-</div>
-  
-  
-</div>
 
 
  </body>
