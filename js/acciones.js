@@ -31,7 +31,8 @@ function consulta()
 function consultatitulo()
 { 
 	alert("Dentro titulo");
-	datos="titulo=" + $('#txttitulo').val();
+	var titulo=document.getElementById("txttitulo").value;
+	datos="titulo=" + titulo;
 	alert(datos);
     $.ajax({  
 		type: "POST",
@@ -60,7 +61,8 @@ function consultatitulo()
 function consultaautor()
 { 
 	alert("Dentro autor");
-	var datos="autor=" + $('#txtautor').val();
+	var autor=document.getElementById("txtautor").value;
+	var datos="autor=" + autor;
 	alert(datos);
     $.ajax({  
 		type: "POST",
