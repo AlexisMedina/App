@@ -7,7 +7,7 @@ function consulta()
 	datos;
     $.ajax({  
 		type: "POST",
-		url: "http://192.168.1.67/libreria/buscarTodos.php",
+		url: "http://192.168.1.171/libreria/buscarTodos.php",
 		data: datos, 
 		error: function() {  
 			alert("Error, no se puede conectar al servidor");
@@ -31,8 +31,7 @@ function consulta()
 function consultatitulo()
 { 
 	alert("Dentro titulo");
-	var titulo=document.getElementById("txttitulo").value;
-	datos="titulo=" + titulo;
+	datos="titulo=" + $('#txttitulo').val();
 	alert(datos);
     $.ajax({  
 		type: "POST",
@@ -61,9 +60,7 @@ function consultatitulo()
 function consultaautor()
 { 
 	alert("Dentro autor");
-	var autor=document.getElementById("txtautor").value;
-	var datos="autor=" + autor;
-	alert(datos);
+	var datos="autor=" + $('#txtautor').val();
     $.ajax({  
 		type: "POST",
 		url: "http://192.168.1.67/libreria/buscarAutor.php",
