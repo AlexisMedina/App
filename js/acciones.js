@@ -35,7 +35,7 @@ function consultatitulo()
 	alert(datos);
     $.ajax({  
 		type: "POST",
-		url: "http://192.168.1.67/libreria/buscarTitulo.php",
+		url: "http://192.168.1.171/libreria/buscarTitulo.php",
 		data: datos, 
 		error: function() {  
 			alert("Error, no se puede conectar al servidor");
@@ -63,7 +63,7 @@ function consultaautor()
 	var datos="autor=" + $('#txtautor').val();
     $.ajax({  
 		type: "POST",
-		url: "http://192.168.1.67/libreria/buscarAutor.php",
+		url: "http://192.168.1.171/libreria/buscarAutor.php",
 		data: datos, 
 		error: function() {  
 			alert("Error, no se puede conectar al servidor");
@@ -90,7 +90,7 @@ function consultaeditorial()
 	datos="editorial=" + $('#txteditorial').val();
     $.ajax({  
 		type: "POST",
-		url: "http://192.168.1.67/libreria/buscarEditorial.php",
+		url: "http://192.168.1.171/libreria/buscarEditorial.php",
 		data: datos, 
 		error: function() {  
 			alert("Error, no se puede conectar al servidor");
