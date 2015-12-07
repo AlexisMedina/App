@@ -3,7 +3,6 @@ $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
 function consulta()
 { 
-	alert("Dentro");
 	datos;
     $.ajax({  
 		type: "POST",
@@ -13,7 +12,6 @@ function consulta()
 			alert("Error, no se puede conectar al servidor");
 		}, 
 		success: function(respuesta) { 
-			alert(respuesta);
          var datosLibros = JSON.parse(respuesta);
 		 $('#contenido').empty();
 		 
@@ -30,7 +28,6 @@ function consulta()
 
 function consultatitulo()
 { 
-	alert("Dentro titulo");
 	datos="titulo=" + $('#txttitulo').val();
 	alert(datos);
     $.ajax({  
@@ -41,7 +38,6 @@ function consultatitulo()
 			alert("Error, no se puede conectar al servidor");
 		}, 
 		success: function(respuesta) { 
-			alert(respuesta);
          var datosLibros = JSON.parse(respuesta);
 		 $('#contenido2').empty();
 		 
@@ -59,7 +55,6 @@ function consultatitulo()
 
 function consultaautor()
 { 
-	alert("Dentro autor");
 	var datos="autor=" + $('#txtautor').val();
     $.ajax({  
 		type: "POST",
@@ -69,7 +64,6 @@ function consultaautor()
 			alert("Error, no se puede conectar al servidor");
 		}, 
 		success: function(respuesta) { 
-			alert(respuesta);
          var datosLibros = JSON.parse(respuesta);
 		 $('#contenido3').empty();
 		 
@@ -86,7 +80,6 @@ function consultaautor()
 
 function consultaeditorial()
 { 
-	alert("Dentro editorial");
 	datos="editorial=" + $('#txteditorial').val();
     $.ajax({  
 		type: "POST",
@@ -96,7 +89,6 @@ function consultaeditorial()
 			alert("Error, no se puede conectar al servidor");
 		}, 
 		success: function(respuesta) { 
-			alert(respuesta);
          var datosLibros = JSON.parse(respuesta);
 		 $('#contenido4').empty();
 		 
@@ -112,22 +104,18 @@ function consultaeditorial()
 }
 	
 	$("#btnconsulta").on("tap", function(){
-		alert("Preguntando...");
 		consulta();
 	});
 	
 	$("#btntitulo").on("tap", function(){
-		alert("Preguntando...");
 		consultatitulo();
 	});
 	
 	$("#btnautor").on("tap", function(){
-		alert("Preguntando...");
 		consultaautor();
 	});
 	
 	$("#btneditorial").on("tap", function(){
-		alert("Preguntando...");
 		consultaeditorial();
 	});
 }); 
