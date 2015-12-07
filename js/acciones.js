@@ -29,7 +29,6 @@ function consulta()
 function consultatitulo()
 { 
 	datos="titulo=" + $('#txttitulo').val();
-	alert(datos);
     $.ajax({  
 		type: "POST",
 		url: "http://192.168.1.171/libreria/buscarTitulo.php",
