@@ -3,6 +3,7 @@ $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
 function consulta()
 { 
+    alert("Procesando, esto puede tardar varios minutos.");
 	datos;
     $.ajax({  
 		type: "POST",
@@ -12,9 +13,9 @@ function consulta()
 			alert("Error, no se puede conectar al servidor");
 		}, 
 		success: function(respuesta) { 
+		alert(respuesta);
          var datosLibros = JSON.parse(respuesta);
 		 $('#contenido').empty();
-		 alert(respuesta);
 		 $(':mobile-pagecontainer').pagecontainer('change', '#listado', { 
 			transition: 'pop' 
 		 });  
