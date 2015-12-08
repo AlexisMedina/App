@@ -13,14 +13,13 @@ function consulta()
 			alert("Error, no se puede conectar al servidor");
 		}, 
 		success: function(respuesta) { 
-		alert(respuesta);
          var datosLibros = JSON.parse(respuesta);
 		 $('#contenido').empty();
 		 $(':mobile-pagecontainer').pagecontainer('change', '#listado', { 
 			transition: 'pop' 
 		 });  
 		 for (var x=0; x<datosLibros.Libros.length; x++) { 6
-			 $('#contenido').append("<div><div align='center'><div style='display:inline-block' align='center'><img src='http://192.168.0.101/proyecto/recursos/imagenes/libros/" + datosLibros.Libros[x].claveLibro + ".jpg' width='60%' height='auto' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: " + datosLibros.Libros[x].precioventa + "</h2></div>  <div>  <h2>Sinopsis: </h2> <br> <center> <p>" + datosLibros.Libros[x].sinopsisLibro + "</p> </center>  <br><center>" + datosLibros.Libros[x].generoLibro + "</center></div></div>");
+			 $('#contenido').append("<div><div align='center'><div style='display:inline-block' align='center'><img src='http://192.168.0.101/proyecto/recursos/imagenes/libros/" + datosLibros.Libros[x].claveLibro + ".jpg' width='60%' height='auto' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: $" + datosLibros.Libros[x].precioventa + "</h2></div>  <div>  <h2>Sinopsis: </h2> <br> <center> <p>" + datosLibros.Libros[x].sinopsisLibro + "</p> </center>  <br><center>" + datosLibros.Libros[x].generoLibro + "</center></div></div>");
 		 } 
 		 
 		} 
@@ -45,7 +44,7 @@ function consultatitulo()
 			transition: 'pop' 
 		 });  
 		 for (var x=0; x<datosLibros.Libros.length; x++) { 6
-			 $('#contenido2').append("<div><div align='center'><div style='display:inline-block' align='center'><img src='http://192.168.0.101/proyecto/recursos/imagenes/libros/" + datosLibros.Libros[x].claveLibro + ".jpg' width='60%' height='auto' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: " + datosLibros.Libros[x].precioventa + "</h2></div>  <div>  <h2>Sinopsis: </h2> <br> <center> <p>" + datosLibros.Libros[x].sinopsisLibro + "</p> </center>  <br><center>" + datosLibros.Libros[x].generoLibro + "</center></div></div>");
+			 $('#contenido2').append("<div><div align='center'><div style='display:inline-block' align='center'><img src='http://192.168.0.101/proyecto/recursos/imagenes/libros/" + datosLibros.Libros[x].claveLibro + ".jpg' width='60%' height='auto' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: $" + datosLibros.Libros[x].precioventa + "</h2></div>  <div>  <h2>Sinopsis: </h2> <br> <center> <p>" + datosLibros.Libros[x].sinopsisLibro + "</p> </center>  <br><center>" + datosLibros.Libros[x].generoLibro + "</center></div></div>");
 		 } 
 		 
 		} 
@@ -71,7 +70,7 @@ function consultaautor()
 			transition: 'pop' 
 		 });  
 		 for (var x=0; x<datosLibros.Libros.length; x++) { 6
-			 $('#contenido3').append("<div><div align='center'><div style='display:inline-block' align='center'><img src='http://192.168.0.101/proyecto/recursos/imagenes/libros/" + datosLibros.Libros[x].claveLibro + ".jpg' width='60%' height='auto' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: " + datosLibros.Libros[x].precioventa + "</h2></div>  <div>  <h2>Sinopsis: </h2> <br> <center> <p>" + datosLibros.Libros[x].sinopsisLibro + "</p> </center>  <br><center>" + datosLibros.Libros[x].generoLibro + "</center></div></div>");
+			 $('#contenido3').append("<div><div align='center'><div style='display:inline-block' align='center'><img src='http://192.168.0.101/proyecto/recursos/imagenes/libros/" + datosLibros.Libros[x].claveLibro + ".jpg' width='60%' height='auto' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: $" + datosLibros.Libros[x].precioventa + "</h2></div>  <div>  <h2>Sinopsis: </h2> <br> <center> <p>" + datosLibros.Libros[x].sinopsisLibro + "</p> </center>  <br><center>" + datosLibros.Libros[x].generoLibro + "</center></div></div>");
 		 } 
 		 
 		} 
@@ -96,7 +95,7 @@ function consultaeditorial()
 			transition: 'pop' 
 		 });  
 		 for (var x=0; x<datosLibros.Libros.length; x++) { 6
-			 $('#contenido4').append("<div><div align='center'><div style='display:inline-block' align='center'><img src='http://192.168.0.101/proyecto/recursos/imagenes/libros/" + datosLibros.Libros[x].claveLibro + ".jpg' width='60%' height='auto' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: " + datosLibros.Libros[x].precioventa + "</h2></div>  <div>  <h2>Sinopsis: </h2> <br> <center> <p>" + datosLibros.Libros[x].sinopsisLibro + "</p> </center>  <br><center>" + datosLibros.Libros[x].generoLibro + "</center></div></div>");
+			 $('#contenido4').append("<div><div align='center'><div style='display:inline-block' align='center'><img src='http://192.168.0.101/proyecto/recursos/imagenes/libros/" + datosLibros.Libros[x].claveLibro + ".jpg' width='60%' height='auto' /></div><div style='display:inline-block' align='center'><h1>" + datosLibros.Libros[x].tituloLibro + "</h1><br><h2>" + datosLibros.Libros[x].autorLibro + "</h2><div style='display:inline-block' align='center'><h3>Editorial: " + datosLibros.Libros[x].editorialLibro + "</h3></div><div style='display:inline-block' align='center'><h3>Número de paginas: " + datosLibros.Libros[x].paginasLibro + "</h3></div></div></div><div align='center'><h2>Precio: $" + datosLibros.Libros[x].precioventa + "</h2></div>  <div>  <h2>Sinopsis: </h2> <br> <center> <p>" + datosLibros.Libros[x].sinopsisLibro + "</p> </center>  <br><center>" + datosLibros.Libros[x].generoLibro + "</center></div></div>");
 		 } 
 		 
 		} 
